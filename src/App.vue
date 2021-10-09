@@ -37,32 +37,21 @@
         </ul>
       </div>
     </div>
-    <div class="mobile-list flex1">
-      <div class="">
+    <div class="mobile-list grid">
+      <div class="grid-item">
         <img src="./assets/mobile.jpg" alt="" class="img" />
       </div>
-      <div class="data1 grid-item1">
-        <div class="message grid">
-          <input v-on:click.prevent="increment" type="button" value="+"  class="but"/>
-          <p class="display">{{ count }}</p>
-          <input v-on:click.prevent="decrement" type="button" value="-"  class="but"/>
-        </div>
+      <div class="data grid-item">
+        <ul class="desc">
+          <li class="mtitle">Nokia 8 smartphone LTE,</li>
+          <li class="mdesc">Polished copper</li>
+        </ul>
       </div>
-      <div class="data2 grid-item1">
-        <div class="svg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-x-lg"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"
-            />
-          </svg>
-        </div>
+      <div class="data grid-item">
+        <ul class="right">
+          <li class="qunt">1</li>
+          <li class="price"><span>AED</span> <b>1,199</b></li>
+        </ul>
       </div>
     </div>
     <hr />
@@ -84,6 +73,11 @@
       <input type="button" value="PROCEED TO CHECKOUT" class="button1" />
     </div><br><br>
   </div>
+  <div class="message grid">
+          <input v-on:click.prevent="increment" type="button" value="+"  class="but"/>
+          <p class="display">{{ count }}</p>
+          <input v-on:click.prevent="decrement" type="button" value="-"  class="but"/>
+        </div>
 </template>
 
 <script>
@@ -102,6 +96,7 @@ export default {
         this.count--;
       }
     },
+    
   },
 };
 </script>
